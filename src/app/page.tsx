@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes';
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
-import NavButtons from "@/components/NavButtons";
+import SideButtons from "@/components/SideButtons";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -35,8 +35,8 @@ export default function Home() {
         />
         <h1 className={styles.title}>XI.1 CLASS</h1>
         <div className={styles.navButtons}>
-          <NavButtons href="/about" emoji="ℹ️" label="About" />
-          <NavButtons href="/contact" emoji="✉️" label="Contact" />
+          <SideButtons href="/jadwal-pelajaran" emoji="ℹ️" label="Jadwal Pelajaran" />
+          <SideButtons href="/daftar-guru" emoji="✉️" label="Daftar Guru" />
         </div>
       </main>
 
@@ -49,7 +49,7 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src="/github.svg"
+            src={theme === "dark" ? "/github.svg" : "/github-mark-white.svg"}
             alt="GitHub icon"
             width={16}
             height={16}

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import styles from "./NavButtons.module.css"; 
+import styles from "./SideButtons.module.css"; 
 
-export default function NavButtons({ href, emoji, label }: { href: string; emoji: string; label: string }) {
+export default function SideButtons({ href, emoji, label }: { href: string; emoji: string; label: string }) {
   return (
     <Link href={href}>
         <div className={styles.navButton}>
